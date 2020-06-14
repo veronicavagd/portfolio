@@ -207,9 +207,6 @@ footer {
   .home-transition {
     animation: home-transition 1.5s;
   }
-  .card-project-transition {
-    animation: card-projects-transition 2s;
-  }
   .mask-transition {
     animation: mask-transition 3s;
   }
@@ -235,14 +232,6 @@ footer {
   50%  {opacity: 0.5;}
   75%  {opacity: 0.3;}
   100% {opacity: 0;}
-}
-
-@keyframes card-projects-transition {
-  0%   {opacity: 0;}
-  25%  {opacity: 0.3;}
-  50%  {opacity: 0.5;}
-  75%  {opacity: 0.8;}
-  100% {opacity: 1;}
 }
 
 @keyframes init-transition {
