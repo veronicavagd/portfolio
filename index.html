@@ -23,14 +23,11 @@
 </head>
 
 <body>
-  <script>
-
-  </script>
-  <header>
+  <header id="header">
     <h3 id="name-header" class="invisible" onclick="toHome()">
         Verónica <span>García</span>
     </h3>
-    <ul>
+    <ul id="socials">
       <li>
         <a href="https://www.behance.net/veronicavagd" target="_blank"><i class="fab fa-behance"></i></a>
       </li>
@@ -45,7 +42,18 @@
       </li>
     </ul>
   </header>
-  <main>
+  <main id="mobile" class="main-mobile hidden">
+    <div id="content-mobile" class="content-mobile">
+      <img src="img/girasol.svg" class="girasol-logo" alt="logo" />
+      <span class="mobile-mesagge">
+         Estamos trabajando en la versión móvil, puedes ver mis trabajos en desktop o en mis redes profesionales.
+      </span>
+      <span class="mobile-mesagge">
+        ¡Gracias por tu interés!
+      </span>
+    </div>
+  </main>
+  <main id="desktop" class="hidden">
     <section id="home" class="home">
       <div class="me">
         <div class="content-me">
@@ -149,7 +157,7 @@
       </div>
     </section>
   </main>
-  <footer id="footer">
+  <footer id="footer" class="hidden">
     Designed and development with love &hearts; by Verónica García &copy;2020
   </footer>
 

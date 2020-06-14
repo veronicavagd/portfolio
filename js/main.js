@@ -1,4 +1,12 @@
 window.addEventListener("load", () => {
+
+  if(window.screen.width <= 768) {
+    document.getElementById("mobile").classList.remove("hidden");
+    return
+  } else {
+    document.getElementById("desktop").classList.remove("hidden");
+  }
+
   document.getElementById("name").classList.add("invisible");
   document.getElementById("about").classList.add("invisible");
   document.getElementById("btn-portfolio").classList.add("invisible");
