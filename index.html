@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/veronicavagd/portfolio/master/img/imagen-og.png">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="/img/girasol.svg">
+  <link rel="icon" type="image/svg" href="/img/girasol.svg" />
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -24,59 +24,10 @@
 
 <body>
   <script>
-    window.addEventListener("load", () => {
-      document.getElementById("name").classList.add("invisible");
-      document.getElementById("about").classList.add("invisible");
-      document.getElementById("btn-portfolio").classList.add("invisible");
 
-      setTimeout(() => {
-        document.getElementById("name").classList.add("init-transition");
-        document.getElementById("about").classList.add("init-transition");
-        document.getElementById("btn-portfolio").classList.add("init-transition");
-        document.getElementById("name").classList.remove("invisible");
-        document.getElementById("about").classList.remove("invisible");
-        document.getElementById("btn-portfolio").classList.remove("invisible");
-      }, 1000);
-    },false)
-
-    myFunction = () => {
-      document.getElementById("home").classList.add("home-transition");
-      setTimeout(() => {
-        document.getElementById("home").classList.add("hidden");
-        document.getElementById("footer").classList.add("hidden");
-        document.getElementById("projects").classList.remove("hidden"); 
-        document.getElementById("name-header").classList.remove("invisible");
-        document.getElementById("mask").classList.add("mask-transition");
-      }, 1500);
-      setTimeout(() => {
-        document.getElementById("mask").classList.add("hidden");
-      }, 3000);
-
-      // var i = 1;   
-      // function myLoop() {         
-      //   setTimeout(function() {   
-      //     document.getElementById(`card-${i}`).classList.add("card-projects-transition");
-      //     i++;                    
-      //     if (i < 7) {           
-      //       myLoop();            
-      //     }                      
-      //   }, 500)
-      // }               
-
-      // myLoop();  
-    }
-
-    myFunction2 = () => {
-      document.getElementById("projects").classList.add("hidden");
-      document.getElementById("name-header").classList.add("invisible");
-      document.getElementById("home").classList.remove("home-transition");
-      document.getElementById("home").classList.remove("hidden"); 
-      document.getElementById("footer").classList.remove("hidden");
-      document.getElementById("mask").classList.remove("hidden"); 
-    }
   </script>
   <header>
-    <h3 id="name-header" class="invisible" onclick="myFunction2()">
+    <h3 id="name-header" class="invisible" onclick="toHome()">
         Verónica <span>García</span>
     </h3>
     <ul>
@@ -105,12 +56,9 @@
         </div>
         <h3 id="about">UX/UI Designer ◦ Diseño Front-End ◦ Marketing Digital</h3>
         <div>
-        <button id="btn-portfolio" onclick="myFunction()"">Portfolio</button>
+        <button id="btn-portfolio" onclick="toProjects()"">Portfolio</button>
         </div>
       </div>
-      <!-- <div id="arrow" class="content-arrow-right">
-          <img src="/img/arrow-right.svg" onclick="myFunction()">
-      </div>  -->
     </section>
     <section id="projects" class="projects hidden">
       <div id="mask" class="mask"></div>
