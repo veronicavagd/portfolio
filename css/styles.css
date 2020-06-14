@@ -205,9 +205,15 @@ footer {
   width: 100vw;
 }
 
-.content-mobile img {
+.content-mobile .content-mobile-logo {
+  display: flex;
+  width: 100%;
+}
+
+.content-mobile .content-mobile-logo img {
   height: 160px;
   width: 160px;
+  margin: 0 auto;
 }
 
 .content-mobile span {
