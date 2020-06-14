@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+::-webkit-scrollbar{display: none;}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  height: 62px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h3 {
+  font-size: 20px;
+  margin: 0 24px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+header h3 span {
+  border-bottom: 2px solid #ecd14d;
+}
+
+header ul {
+  display:  flex;
+  align-items: center;
+  margin: 0 24px; 
+  padding: 0;
+}
+
+header ul li {
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  line-height: 48px;
+  text-align: center;
+  list-style: none;
+  font-size: 20px;
+}
+
+header ul li a {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+  height: 40px;
+  background-color: #fbfbfb;
+  line-height: 40px;
+  font-size: 22px;
+  text-align: center;
+  color: #a6a6a6;
+  font-family: 'Marck Script', cursive;
+}
+
+/* Home */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 102px);
+  width: 100vw;
+}
+
+.me {
+  margin: auto 80px;
+}
+
+.me .content-me {
+  display: flex;
+  align-items: center;
+}
+
+.content-me #name {
+  font-size: 120px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.content-me #name span {
+  border-bottom: 8px solid #ecd14d;
+}
+
+.me #about {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: 200;
+}
+
+.me #btn-portfolio {
+  margin: 28px 0;
+  font-size: 24px;
+  font-weight: 500;
+  border: 2px solid #ecd14d;
+  padding: 12px 24px;
+  border-radius: 32px;
+  color: #FFF;
+  background-color: #ecd14d;
+  box-shadow: 0 4px 24px rgba(46, 46, 51, 0.08), 0 4px 8px rgba(229, 229, 229, 0.8); 
+  cursor: pointer;
+}
+
+#btn-portfolio:hover{
+  color: #ecd14d;
+  background: none;
+}
+
+#btn-portfolio:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Projects */
+.projects {
+  max-width: 100vw;
+}
+
+.projects .mask {
+  position:absolute;
+  z-index:1;
+  background-color: #FFF;
+  width: 100vw;
+  height: calc(100vh - 62px);
+}
+
+.projects-content {
+  display: flex; 
+}
+
+.projects-content {
+  text-decoration: none;
+}
+
+.projects .card-project {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+	position: relative;
+  max-width: calc(100vw / 6); 
+  max-height: calc(100vh - 62px);
+}
+
+
+.card-project img {
+  width: 100%;
+  min-height: calc(100vh - 62px);
+  position: relative;
+  transition: ease-in-out 1s;
+  -webkit-transition: ease-in-out 1s;  
+}
+
+.card-project:hover img {
+  opacity: 0.2;
+}
+
+.card-project .about-project {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  color: #8c8c8c;
+  transition: ease-in-out 2s;
+  -webkit-transition: ease-in-out 2s;  
+  text-decoration: none;
+}
+
+.card-project:hover .about-project {
+  opacity: 1;
+}
+
+.about-project .title {
+  font-size: 1.8vw;
+  margin: 16px 0;
+  font-weight: 400;
+
+}
+
+.about-project .description {
+  font-size: 1.2vw;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+
+/* animaciones */
+.girasol-logo {
+  height: 120px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .girasol-logo {
+    animation: girasol-logo-spin infinite 20s linear;
+  }
+  .home-transition {
+    animation: home-transition 1.5s;
+  }
+  .card-project-transition {
+    animation: card-projects-transition 2s;
+  }
+  .mask-transition {
+    animation: mask-transition 3s;
+  }
+  .init-transition {
+    animation: init-transition 2s;
+  }
+}
+
+
+
+@keyframes girasol-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-transition {
+  0%   {opacity: 1;}
+  25%  {opacity: 0.8;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 0.3;}
+  100% {opacity: 0;}
+}
+
+@keyframes card-projects-transition {
+  0%   {opacity: 0;}
+  25%  {opacity: 0.3;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 0.8;}
+  100% {opacity: 1;}
+}
+
+@keyframes init-transition {
+  0%   {opacity: 0;}
+  25%  {opacity: 0;}
+  50%  {opacity: 0.15;}
+  60%  {opacity: 0.35;}
+  70%  {opacity: 0.50;}
+  80% {opacity: 0.65;}
+  90% {opacity: 0.8;}
+  100% {opacity: 1;}
+}
+
+@keyframes mask-transition {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(200vw);
+  }
+}

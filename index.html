@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("name").classList.add("invisible");
+      document.getElementById("about").classList.add("invisible");
+      document.getElementById("btn-portfolio").classList.add("invisible");
+
+      setTimeout(() => {
+        document.getElementById("name").classList.add("init-transition");
+        document.getElementById("about").classList.add("init-transition");
+        document.getElementById("btn-portfolio").classList.add("init-transition");
+        document.getElementById("name").classList.remove("invisible");
+        document.getElementById("about").classList.remove("invisible");
+        document.getElementById("btn-portfolio").classList.remove("invisible");
+      }, 1000);
+    },false)
+
+    myFunction = () => {
+      document.getElementById("home").classList.add("home-transition");
+      setTimeout(() => {
+        document.getElementById("home").classList.add("hidden");
+        document.getElementById("footer").classList.add("hidden");
+        document.getElementById("projects").classList.remove("hidden"); 
+        document.getElementById("name-header").classList.remove("invisible");
+        document.getElementById("mask").classList.add("mask-transition");
+      }, 1500);
+      setTimeout(() => {
+        document.getElementById("mask").classList.add("hidden");
+      }, 3000);
+
+      // var i = 1;   
+      // function myLoop() {         
+      //   setTimeout(function() {   
+      //     document.getElementById(`card-${i}`).classList.add("card-projects-transition");
+      //     i++;                    
+      //     if (i < 7) {           
+      //       myLoop();            
+      //     }                      
+      //   }, 500)
+      // }               
+
+      // myLoop();  
+    }
+
+    myFunction2 = () => {
+      document.getElementById("projects").classList.add("hidden");
+      document.getElementById("name-header").classList.add("invisible");
+      document.getElementById("home").classList.remove("home-transition");
+      document.getElementById("home").classList.remove("hidden"); 
+      document.getElementById("footer").classList.remove("hidden");
+      document.getElementById("mask").classList.remove("hidden"); 
+    }
+  </script>
+  <header>
+    <h3 id="name-header" class="invisible" onclick="myFunction2()">
+        Verónica <span>García</span>
+    </h3>
+    <ul>
+      <li>
+        <a href="https://www.behance.net/veronicavagd" target="_blank"><i class="fab fa-behance"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/veronicaalexandragarciadominguez/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li>
+        <a href="https://medium.com/@veronicavagd" target="_blank"><i class="fab fa-medium-m"></i></a>
+      </li>
+      <li>
+        <a download href="download/Veronica_Garcia_CV.pdf"><i class="far fa-address-card"></i></a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <section id="home" class="home">
+      <div class="me">
+        <div class="content-me">
+          <h1 id="name">
+            Verónica <span>García</span>
+          </h1>
+          <img src="img/girasol.svg" class="girasol-logo" alt="logo" />
+        </div>
+        <h3 id="about">UX/UI Designer ◦ Diseño Front-End ◦ Marketing Digital</h3>
+        <div>
+        <button id="btn-portfolio" onclick="myFunction()"">Portfolio</button>
+        </div>
+      </div>
+      <!-- <div id="arrow" class="content-arrow-right">
+          <img src="/img/arrow-right.svg" onclick="myFunction()">
+      </div>  -->
+    </section>
+    <section id="projects" class="projects hidden">
+      <div id="mask" class="mask"></div>
+      <div class="projects-content">
+        <a href="https://www.behance.net/gallery/90404551/We-Choose" target="_blank">
+          <div id="card-1" class="card-project">
+              <img src="/img/card1.png" alt="">
+              <div class="about-project">
+                <h3 class="title">
+                  WE CHOOSE
+                </h3>
+                <p class="description">
+                  Una app para elegir de forma rápida un club
+                </p>
+              </div>
+          </div>
+        </a>
+        <a href="https://www.behance.net/gallery/90333455/How-Might-We-Una-app-saludable" target="_blank">
+          <div id="card-2" class="card-project">
+            <img src="/img/card2.png" alt="">
+            <div class="about-project">
+              <h3 class="title">
+                HOW MIGHT WE?
+              </h3>
+              <p class="description">
+                Aplicación móvil que te permite ver opciones de recetas saludables
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/90165371/Huertify" target="_blank">
+          <div id="card-3" class="card-project">
+            <img src="/img/card3.png" alt="">
+            <div class="about-project">
+              <h3 class="title">
+                FRESH&LOCAL
+              </h3>
+              <p class="description">
+                Sitio web  para la venta de productos orgánicos
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/90165103/WhatsApp" target="_blank">
+          <div id="card-4" class="card-project">
+            <img src="/img/card4.png" alt="">
+            <div class="about-project">
+              <h3 class="title">
+                WHASTAPP+
+              </h3>
+              <p class="description">
+                Una característica nueva a la aplicación WhatsApp
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/97040847/Cisanz" target="_blank">
+          <div id="card-5" class="card-project">
+            <img src="/img/card5.png" alt="">
+            <div class="about-project">
+              <h3 class="title">
+                CISANZ
+              </h3>
+              <p class="description">
+                Plataforma digital para clases teóricas de manejo de coches
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/97122595/Oh-My-Art" target="_blank">
+          <div id="card-6" class="card-project">
+            <img src="/img/card6.png" alt="">
+            <div class="about-project">
+              <h3 class="title">
+                OH MY ART!
+              </h3>
+              <p class="description">
+                Aplicación móvil para un museo de arte 
+              </p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    Designed and development with love &hearts; by Verónica García &copy;2020
+  </footer>
+
+  <script src="https://kit.fontawesome.com/cfdd3fd9ea.js" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
