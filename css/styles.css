@@ -197,10 +197,12 @@ footer {
 
 .content-mobile {
   display: flex;
+  display: -webkit-flex; /* safari  mobile */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 62px);
+  width: 100vw;
 }
 
 .content-mobile img {
